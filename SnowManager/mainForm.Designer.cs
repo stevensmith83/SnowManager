@@ -69,11 +69,11 @@
             this.customerNavi = new ComponentFactory.Krypton.Navigator.KryptonPage();
             this.customerList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.newCustomer = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.mainNavigator = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.itemNavi = new ComponentFactory.Krypton.Navigator.KryptonPage();
-            this.newItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.itemList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.inventory = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.itemList = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.newItem = new ComponentFactory.Krypton.Toolkit.KryptonButton();
+            this.mainNavigator = new ComponentFactory.Krypton.Navigator.KryptonNavigator();
             this.menuStrip.SuspendLayout();
             this.toolStripContainer.ContentPanel.SuspendLayout();
             this.toolStripContainer.SuspendLayout();
@@ -88,10 +88,10 @@
             this.orderNavi.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerNavi)).BeginInit();
             this.customerNavi.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.mainNavigator)).BeginInit();
-            this.mainNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.itemNavi)).BeginInit();
             this.itemNavi.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.mainNavigator)).BeginInit();
+            this.mainNavigator.SuspendLayout();
             this.SuspendLayout();
             // 
             // statusStrip
@@ -387,7 +387,7 @@
             this.orderNavi,
             this.customerNavi,
             this.itemNavi});
-            this.leftNavigator.SelectedIndex = 0;
+            this.leftNavigator.SelectedIndex = 1;
             this.leftNavigator.Size = new System.Drawing.Size(196, 542);
             this.leftNavigator.TabIndex = 0;
             this.leftNavigator.Text = "leftNavigator";
@@ -466,18 +466,7 @@
             this.newCustomer.Size = new System.Drawing.Size(171, 25);
             this.newCustomer.TabIndex = 1;
             this.newCustomer.Values.Text = "Új ügyfél";
-            this.newCustomer.Click += new System.EventHandler(this.AddPage);
-            // 
-            // mainNavigator
-            // 
-            this.mainNavigator.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
-            this.mainNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainNavigator.Location = new System.Drawing.Point(0, 0);
-            this.mainNavigator.Name = "mainNavigator";
-            this.mainNavigator.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarCheckButtonGroupInside;
-            this.mainNavigator.Size = new System.Drawing.Size(1149, 542);
-            this.mainNavigator.TabIndex = 0;
-            this.mainNavigator.Text = "mainNavigator";
+            this.newCustomer.Click += new System.EventHandler(this.newCustomer_Click);
             // 
             // itemNavi
             // 
@@ -496,15 +485,15 @@
             this.itemNavi.ToolTipTitle = "Page ToolTip";
             this.itemNavi.UniqueName = "D938E134575F4A5015B35210CCB12BBD";
             // 
-            // newItem
+            // inventory
             // 
-            this.newItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.inventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.newItem.Location = new System.Drawing.Point(11, 12);
-            this.newItem.Name = "newItem";
-            this.newItem.Size = new System.Drawing.Size(171, 25);
-            this.newItem.TabIndex = 2;
-            this.newItem.Values.Text = "Új elem";
+            this.inventory.Location = new System.Drawing.Point(11, 74);
+            this.inventory.Name = "inventory";
+            this.inventory.Size = new System.Drawing.Size(171, 25);
+            this.inventory.TabIndex = 4;
+            this.inventory.Values.Text = "Leltár";
             // 
             // itemList
             // 
@@ -516,15 +505,26 @@
             this.itemList.TabIndex = 3;
             this.itemList.Values.Text = "Készletlista";
             // 
-            // inventory
+            // newItem
             // 
-            this.inventory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.newItem.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.inventory.Location = new System.Drawing.Point(11, 74);
-            this.inventory.Name = "inventory";
-            this.inventory.Size = new System.Drawing.Size(171, 25);
-            this.inventory.TabIndex = 4;
-            this.inventory.Values.Text = "Leltár";
+            this.newItem.Location = new System.Drawing.Point(11, 12);
+            this.newItem.Name = "newItem";
+            this.newItem.Size = new System.Drawing.Size(171, 25);
+            this.newItem.TabIndex = 2;
+            this.newItem.Values.Text = "Új elem";
+            // 
+            // mainNavigator
+            // 
+            this.mainNavigator.Button.ButtonDisplayLogic = ComponentFactory.Krypton.Navigator.ButtonDisplayLogic.None;
+            this.mainNavigator.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainNavigator.Location = new System.Drawing.Point(0, 0);
+            this.mainNavigator.Name = "mainNavigator";
+            this.mainNavigator.NavigatorMode = ComponentFactory.Krypton.Navigator.NavigatorMode.BarCheckButtonGroupInside;
+            this.mainNavigator.Size = new System.Drawing.Size(1149, 542);
+            this.mainNavigator.TabIndex = 0;
+            this.mainNavigator.Text = "mainNavigator";
             // 
             // MainForm
             // 
@@ -556,10 +556,10 @@
             this.orderNavi.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.customerNavi)).EndInit();
             this.customerNavi.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.mainNavigator)).EndInit();
-            this.mainNavigator.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.itemNavi)).EndInit();
             this.itemNavi.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.mainNavigator)).EndInit();
+            this.mainNavigator.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 

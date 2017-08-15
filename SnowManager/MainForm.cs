@@ -25,5 +25,11 @@ namespace SnowManager
             newForm.Dock = DockStyle.Fill;
             newForm.Show();
         }
+
+        private void newCustomer_Click(object sender, EventArgs e)
+        {
+            CustomerForm cForm = new CustomerForm();
+            cForm.ShowDialog();
+        }
     }
 }
