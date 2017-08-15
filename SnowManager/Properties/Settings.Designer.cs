@@ -25,18 +25,6 @@ namespace SnowManager.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=default.sqlite;Version=3;")]
-        public string connectionString {
-            get {
-                return ((string)(this["connectionString"]));
-            }
-            set {
-                this["connectionString"] = value;
-            }
-        }
-        
-        [global::System.Configuration.UserScopedSettingAttribute()]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("")]
         public string dbPassword {
             get {
