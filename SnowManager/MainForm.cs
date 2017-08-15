@@ -28,8 +28,15 @@ namespace SnowManager
 
         private void newCustomer_Click(object sender, EventArgs e)
         {
-            CustomerForm cForm = new CustomerForm();
-            cForm.ShowDialog();
+            Person person = new Person();
+            CustomerForm cForm = new CustomerForm(person);
+            cForm.ShowDialog();            
+        }
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SettingsForm sForm = new SettingsForm();
+            sForm.ShowDialog();
         }
     }
 }

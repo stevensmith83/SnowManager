@@ -34,5 +34,53 @@ namespace SnowManager.Properties {
                 this["connectionString"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dbPassword {
+            get {
+                return ((string)(this["dbPassword"]));
+            }
+            set {
+                this["dbPassword"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool dbEncryption {
+            get {
+                return ((bool)(this["dbEncryption"]));
+            }
+            set {
+                this["dbEncryption"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string dbSource {
+            get {
+                return ((string)(this["dbSource"]));
+            }
+            set {
+                this["dbSource"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("3")]
+        public string dbVersion {
+            get {
+                return ((string)(this["dbVersion"]));
+            }
+            set {
+                this["dbVersion"] = value;
+            }
+        }
     }
 }

@@ -29,20 +29,20 @@
         private void InitializeComponent()
         {
             this.customerBox = new ComponentFactory.Krypton.Toolkit.KryptonGroupBox();
+            this.birthLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.idLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.emailLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.phoneLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.addressLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
+            this.birthDate = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
+            this.idBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.emailBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.phoneBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.addressBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
+            this.nameBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
             this.saveButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
             this.cancelButton = new ComponentFactory.Krypton.Toolkit.KryptonButton();
-            this.nameBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.addressBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.phoneBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.emailBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.idBox = new ComponentFactory.Krypton.Toolkit.KryptonTextBox();
-            this.birthDate = new ComponentFactory.Krypton.Toolkit.KryptonDateTimePicker();
-            this.nameLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.addressLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.phoneLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.emailLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.idLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
-            this.birthLabel = new ComponentFactory.Krypton.Toolkit.KryptonLabel();
             ((System.ComponentModel.ISupportInitialize)(this.customerBox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.customerBox.Panel)).BeginInit();
             this.customerBox.Panel.SuspendLayout();
@@ -73,101 +73,14 @@
             this.customerBox.TabIndex = 0;
             this.customerBox.Values.Heading = "";
             // 
-            // saveButton
+            // birthLabel
             // 
-            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveButton.Location = new System.Drawing.Point(264, 143);
-            this.saveButton.Name = "saveButton";
-            this.saveButton.Size = new System.Drawing.Size(90, 25);
-            this.saveButton.TabIndex = 1;
-            this.saveButton.Values.Text = "Mentés";
-            // 
-            // cancelButton
-            // 
-            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(376, 143);
-            this.cancelButton.Name = "cancelButton";
-            this.cancelButton.Size = new System.Drawing.Size(90, 25);
-            this.cancelButton.TabIndex = 2;
-            this.cancelButton.Values.Text = "Mégse";
-            // 
-            // nameBox
-            // 
-            this.nameBox.Location = new System.Drawing.Point(108, 3);
-            this.nameBox.Name = "nameBox";
-            this.nameBox.Size = new System.Drawing.Size(356, 20);
-            this.nameBox.TabIndex = 0;
-            // 
-            // addressBox
-            // 
-            this.addressBox.Location = new System.Drawing.Point(108, 29);
-            this.addressBox.Name = "addressBox";
-            this.addressBox.Size = new System.Drawing.Size(356, 20);
-            this.addressBox.TabIndex = 1;
-            // 
-            // phoneBox
-            // 
-            this.phoneBox.Location = new System.Drawing.Point(108, 55);
-            this.phoneBox.Name = "phoneBox";
-            this.phoneBox.Size = new System.Drawing.Size(356, 20);
-            this.phoneBox.TabIndex = 2;
-            // 
-            // emailBox
-            // 
-            this.emailBox.Location = new System.Drawing.Point(108, 81);
-            this.emailBox.Name = "emailBox";
-            this.emailBox.Size = new System.Drawing.Size(356, 20);
-            this.emailBox.TabIndex = 3;
-            // 
-            // idBox
-            // 
-            this.idBox.Location = new System.Drawing.Point(108, 107);
-            this.idBox.Name = "idBox";
-            this.idBox.Size = new System.Drawing.Size(133, 20);
-            this.idBox.TabIndex = 4;
-            // 
-            // birthDate
-            // 
-            this.birthDate.Location = new System.Drawing.Point(331, 107);
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Size = new System.Drawing.Size(133, 21);
-            this.birthDate.TabIndex = 5;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.nameLabel.Location = new System.Drawing.Point(3, 3);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(37, 20);
-            this.nameLabel.TabIndex = 6;
-            this.nameLabel.Values.Text = "Név:";
-            // 
-            // addressLabel
-            // 
-            this.addressLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.addressLabel.Location = new System.Drawing.Point(3, 29);
-            this.addressLabel.Name = "addressLabel";
-            this.addressLabel.Size = new System.Drawing.Size(36, 20);
-            this.addressLabel.TabIndex = 7;
-            this.addressLabel.Values.Text = "Cím:";
-            // 
-            // phoneLabel
-            // 
-            this.phoneLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.phoneLabel.Location = new System.Drawing.Point(3, 55);
-            this.phoneLabel.Name = "phoneLabel";
-            this.phoneLabel.Size = new System.Drawing.Size(87, 20);
-            this.phoneLabel.TabIndex = 8;
-            this.phoneLabel.Values.Text = "Telefonszám:";
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.emailLabel.Location = new System.Drawing.Point(3, 81);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(50, 20);
-            this.emailLabel.TabIndex = 9;
-            this.emailLabel.Values.Text = "E-mail:";
+            this.birthLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.birthLabel.Location = new System.Drawing.Point(262, 107);
+            this.birthLabel.Name = "birthLabel";
+            this.birthLabel.Size = new System.Drawing.Size(63, 20);
+            this.birthLabel.TabIndex = 11;
+            this.birthLabel.Values.Text = "Szül. idő:";
             // 
             // idLabel
             // 
@@ -178,14 +91,102 @@
             this.idLabel.TabIndex = 10;
             this.idLabel.Values.Text = "Szem. ig. szám:";
             // 
-            // birthLabel
+            // emailLabel
             // 
-            this.birthLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
-            this.birthLabel.Location = new System.Drawing.Point(262, 107);
-            this.birthLabel.Name = "birthLabel";
-            this.birthLabel.Size = new System.Drawing.Size(63, 20);
-            this.birthLabel.TabIndex = 11;
-            this.birthLabel.Values.Text = "Szül. idő:";
+            this.emailLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.emailLabel.Location = new System.Drawing.Point(3, 81);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(50, 20);
+            this.emailLabel.TabIndex = 9;
+            this.emailLabel.Values.Text = "E-mail:";
+            // 
+            // phoneLabel
+            // 
+            this.phoneLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.phoneLabel.Location = new System.Drawing.Point(3, 55);
+            this.phoneLabel.Name = "phoneLabel";
+            this.phoneLabel.Size = new System.Drawing.Size(87, 20);
+            this.phoneLabel.TabIndex = 8;
+            this.phoneLabel.Values.Text = "Telefonszám:";
+            // 
+            // addressLabel
+            // 
+            this.addressLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.addressLabel.Location = new System.Drawing.Point(3, 29);
+            this.addressLabel.Name = "addressLabel";
+            this.addressLabel.Size = new System.Drawing.Size(36, 20);
+            this.addressLabel.TabIndex = 7;
+            this.addressLabel.Values.Text = "Cím:";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.LabelStyle = ComponentFactory.Krypton.Toolkit.LabelStyle.BoldControl;
+            this.nameLabel.Location = new System.Drawing.Point(3, 3);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(37, 20);
+            this.nameLabel.TabIndex = 6;
+            this.nameLabel.Values.Text = "Név:";
+            // 
+            // birthDate
+            // 
+            this.birthDate.Location = new System.Drawing.Point(331, 107);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Size = new System.Drawing.Size(133, 21);
+            this.birthDate.TabIndex = 5;
+            // 
+            // idBox
+            // 
+            this.idBox.Location = new System.Drawing.Point(108, 107);
+            this.idBox.Name = "idBox";
+            this.idBox.Size = new System.Drawing.Size(133, 20);
+            this.idBox.TabIndex = 4;
+            // 
+            // emailBox
+            // 
+            this.emailBox.Location = new System.Drawing.Point(108, 81);
+            this.emailBox.Name = "emailBox";
+            this.emailBox.Size = new System.Drawing.Size(356, 20);
+            this.emailBox.TabIndex = 3;
+            // 
+            // phoneBox
+            // 
+            this.phoneBox.Location = new System.Drawing.Point(108, 55);
+            this.phoneBox.Name = "phoneBox";
+            this.phoneBox.Size = new System.Drawing.Size(356, 20);
+            this.phoneBox.TabIndex = 2;
+            // 
+            // addressBox
+            // 
+            this.addressBox.Location = new System.Drawing.Point(108, 29);
+            this.addressBox.Name = "addressBox";
+            this.addressBox.Size = new System.Drawing.Size(356, 20);
+            this.addressBox.TabIndex = 1;
+            // 
+            // nameBox
+            // 
+            this.nameBox.Location = new System.Drawing.Point(108, 3);
+            this.nameBox.Name = "nameBox";
+            this.nameBox.Size = new System.Drawing.Size(356, 20);
+            this.nameBox.TabIndex = 0;
+            // 
+            // saveButton
+            // 
+            this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.saveButton.Location = new System.Drawing.Point(264, 143);
+            this.saveButton.Name = "saveButton";
+            this.saveButton.Size = new System.Drawing.Size(90, 25);
+            this.saveButton.TabIndex = 1;
+            this.saveButton.Values.Text = "Mentés";
+            this.saveButton.Click += new System.EventHandler(this.saveButton_Click);
+            // 
+            // cancelButton
+            // 
+            this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.cancelButton.Location = new System.Drawing.Point(376, 143);
+            this.cancelButton.Name = "cancelButton";
+            this.cancelButton.Size = new System.Drawing.Size(90, 25);
+            this.cancelButton.TabIndex = 2;
+            this.cancelButton.Values.Text = "Mégse";
             // 
             // CustomerForm
             // 
