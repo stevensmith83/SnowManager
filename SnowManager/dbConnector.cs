@@ -56,6 +56,16 @@ namespace SnowManager
             return nextID == DBNull.Value ? 1 : Convert.ToInt32(nextID) + 1;
         }
 
+        public bool CheckLogin(string username, string password)
+        {
+            command = new SQLiteCommand("SELECT password FROM users WHERE username='" + username + "'", connection);
+            OpenConnection();
+            object pwQuery = command.ExecuteScalar();
+            CloseConnection();
+
+            return (pwQuery == DBNull.Value || Convert.ToString(pwQuery) != password) ? false : true;
+        }
+
         public void EncryptDB(string password)
         {
             OpenConnection();

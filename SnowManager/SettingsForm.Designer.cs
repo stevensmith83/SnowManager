@@ -58,9 +58,9 @@
             this.settingsGroup.Panel.Controls.Add(this.dbFileOpen);
             this.settingsGroup.Panel.Controls.Add(this.dbFileLabel);
             this.settingsGroup.Panel.Controls.Add(this.dbFileBox);
-            this.settingsGroup.Size = new System.Drawing.Size(356, 95);
+            this.settingsGroup.Size = new System.Drawing.Size(356, 70);
             this.settingsGroup.TabIndex = 0;
-            this.settingsGroup.Values.Heading = "Adatbázis";
+            this.settingsGroup.Values.Heading = "";
             // 
             // dbEncryptCheck
             // 
@@ -119,7 +119,7 @@
             // cancelButton
             // 
             this.cancelButton.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.cancelButton.Location = new System.Drawing.Point(256, 101);
+            this.cancelButton.Location = new System.Drawing.Point(254, 76);
             this.cancelButton.Name = "cancelButton";
             this.cancelButton.Size = new System.Drawing.Size(90, 25);
             this.cancelButton.TabIndex = 4;
@@ -128,7 +128,7 @@
             // saveButton
             // 
             this.saveButton.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.saveButton.Location = new System.Drawing.Point(144, 101);
+            this.saveButton.Location = new System.Drawing.Point(142, 76);
             this.saveButton.Name = "saveButton";
             this.saveButton.Size = new System.Drawing.Size(90, 25);
             this.saveButton.TabIndex = 3;
@@ -139,14 +139,14 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 132);
+            this.ClientSize = new System.Drawing.Size(356, 108);
             this.Controls.Add(this.cancelButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.settingsGroup);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "SettingsForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Settings";
+            this.Text = "Beállítások";
             ((System.ComponentModel.ISupportInitialize)(this.settingsGroup.Panel)).EndInit();
             this.settingsGroup.Panel.ResumeLayout(false);
             this.settingsGroup.Panel.PerformLayout();
