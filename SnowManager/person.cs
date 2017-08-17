@@ -61,5 +61,24 @@ namespace SnowManager
                 throw new Exception(ex.Message);
             }
         }
+
+        public void DeletePerson()
+        {
+            //TODO: check dependencies
+            command = new SQLiteCommand("DELETE FROM person WHERE id = ?", connection);
+            command.Parameters.AddWithValue("id", id);
+
+            try
+            {
+                OpenConnection();
+                command.ExecuteNonQuery();
+                CloseConnection();
+            }
+            catch (Exception ex)
+            {
+                ErrorTransaction();
+                throw new Exception(ex.Message);
+            }
+        }
     }
 }

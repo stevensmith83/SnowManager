@@ -11,6 +11,16 @@ namespace SnowManager
         {
             InitializeComponent();
             actualPerson = person;
+
+            if (!actualPerson.id.Equals(0))
+            {
+                nameBox.Text = actualPerson.name;
+                addressBox.Text = actualPerson.address;
+                phoneBox.Text = actualPerson.phone;
+                emailBox.Text = actualPerson.email;
+                idBox.Text = actualPerson.personalID;
+                birthDate.Value = DateTime.Parse(actualPerson.birth);
+            }
         }
 
         private void saveButton_Click(object sender, EventArgs e)

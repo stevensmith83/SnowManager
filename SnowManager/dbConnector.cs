@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Security;
 using System.Security.Cryptography;
+using System.Data;
 using System.Data.SQLite;
 
 namespace SnowManager
@@ -10,10 +11,11 @@ namespace SnowManager
         protected SQLiteConnection connection;
         SQLiteTransaction transaction;
         protected SQLiteCommand command;
+        SQLiteDataAdapter sqlAdapter;
         byte[] entropy = System.Text.Encoding.Unicode.GetBytes("entropyValue");
 
         //SQLiteCommandBuilder sqlCommand;
-        //SQLiteDataAdapter sqlAdapter;
+        
 
         public DBConnector()
         {
@@ -54,6 +56,17 @@ namespace SnowManager
             CloseConnection();
 
             return nextID == DBNull.Value ? 1 : Convert.ToInt32(nextID) + 1;
+        }
+
+        public DataSet GetTable(string table)
+        {
+            DataSet dataSet = new DataSet();
+            OpenConnection();
+            SQLiteDataAdapter dataAdapter = new SQLiteDataAdapter("SELECT * FROM " + table, connection);
+            dataAdapter.Fill(dataSet);
+            CloseConnection();
+
+            return dataSet;
         }
 
         public bool CheckLogin(string username, string password)

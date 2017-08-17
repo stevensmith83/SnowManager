@@ -1,4 +1,5 @@
 ﻿using ComponentFactory.Krypton.Navigator;
+using ComponentFactory.Krypton.Toolkit;
 using System;
 using System.Windows.Forms;
 
@@ -10,16 +11,23 @@ namespace SnowManager
         {
             InitializeComponent();
         }
-                
+
         private void AddPage(object sender, EventArgs e)
         {
-            KryptonPage newPage = new KryptonPage(((ComponentFactory.Krypton.Toolkit.KryptonButton)sender).Text);
+            string name = ((KryptonButton)sender).Name;
+            KryptonPage newPage = new KryptonPage(((KryptonButton)sender).Text);
+
             mainNavigator.Pages.Add(newPage);
             mainNavigator.SelectedPage = newPage;
             newPage.Dock = DockStyle.Fill;
+            Form newForm = null;
 
-            
-            Form newForm = new Form();
+            switch (name)
+            {
+                case ("customerList"): newForm = new CustomerListForm(); break;
+                default: newForm = new Form(); break;
+            }
+
             newForm.TopLevel = false;
             newPage.Controls.Add(newForm);
             newForm.Dock = DockStyle.Fill;
@@ -30,7 +38,7 @@ namespace SnowManager
         {
             Person person = new Person();
             CustomerForm customerForm = new CustomerForm(person);
-            customerForm.ShowDialog();            
+            customerForm.ShowDialog();
         }
 
         private void searchToolStripMenuItem_Click(object sender, EventArgs e)

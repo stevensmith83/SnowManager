@@ -391,7 +391,7 @@
             this.customerNavi,
             this.itemNavi,
             this.userNavi});
-            this.leftNavigator.SelectedIndex = 0;
+            this.leftNavigator.SelectedIndex = 1;
             this.leftNavigator.Size = new System.Drawing.Size(196, 542);
             this.leftNavigator.TabIndex = 0;
             this.leftNavigator.Text = "leftNavigator";
@@ -443,7 +443,7 @@
             this.customerNavi.LastVisibleSet = true;
             this.customerNavi.MinimumSize = new System.Drawing.Size(50, 50);
             this.customerNavi.Name = "customerNavi";
-            this.customerNavi.Size = new System.Drawing.Size(194, 416);
+            this.customerNavi.Size = new System.Drawing.Size(194, 391);
             this.customerNavi.Text = "Ügyfelek";
             this.customerNavi.TextDescription = "Ügyfelek";
             this.customerNavi.TextTitle = "Ügyfelek";
